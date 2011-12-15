@@ -1,0 +1,2 @@
+- pre potreby dema by bolo lepsie mat RSS ulozene lokalne a neriskovat ze to nepojde
+- feed layout od milana
