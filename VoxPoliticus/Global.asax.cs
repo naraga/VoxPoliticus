@@ -24,7 +24,7 @@ namespace VoxPoliticus
                                                                                                         {
                                                                                                             new RssSource("http://richardsulik.blog.sme.sk/rss/")
                                                                                                         }},
-                                      new User{Id = "sulik", Name = "Róbert Fico", Sources = new Source[]
+                                      new User{Id = "fico", Name = "Robert Fico", Sources = new Source[]
                                                                                                         {
                                                                                                             new RssSource("http://fico.blog.sme.sk/rss/")
                                                                                                         }},

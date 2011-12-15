@@ -13,7 +13,7 @@ namespace VoxPoliticus.Controllers
         public ActionResult Index()
         {
             var stories = VoxPoliticusDatabase.Users.SelectMany(u => u.GetStories())
-                .OrderByDescending(s => s.PublDate).Take(30);
+                .OrderByDescending(s => s.PublDate).Take(50);
 
             return View(new FeedViewModel(stories));
         }
