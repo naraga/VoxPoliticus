@@ -1,0 +1,16 @@
+﻿@model FeedViewModel
+
+@{
+    ViewBag.Title = "Stories";
+}
+
+<h2>Feed</h2>
+
+<ul>
+@foreach (var item in Model.FeedItems)
+{
+    <li>
+    <span>@item.PubDate</span><span style="font-weight:bold">@item.UserName</span><span>@item.Title</span>
+    </li>
+}
+</ul>
