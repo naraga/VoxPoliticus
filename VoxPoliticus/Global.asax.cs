@@ -28,6 +28,10 @@ namespace VoxPoliticus
                                                                                                         {
                                                                                                             new RssSource("http://fico.blog.sme.sk/rss/")
                                                                                                         }},
+                                      new User{Id = "kanik", Name = "Ľudovít Kaník", Sources = new Source[]
+                                                                                                        {
+                                                                                                            new RssSource("http://moje.hnonline.sk/blog/1946/feed")
+                                                                                                        }},
 
                                   };
     }
