@@ -21,11 +21,14 @@ namespace VoxPoliticus.Models.ViewModels
         public string Title { get; set; }
         public string Summary { get; set; }
         public DateTime PubDate { get; set; }
+        public string Source { get; set; }
+
         public FeedItemViewModel(Story story)
         {
             UserName = story.User.Name;
             Title = story.Title;
             PubDate = story.PublDate;
+            Source = story.Source.ToString();
         }
     }
     

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel.Syndication;
 using System.Xml;
+using TweetSharp;
 
 namespace VoxPoliticus.Models
 {
@@ -55,10 +56,40 @@ namespace VoxPoliticus.Models
                         Url = item.Links[0].Uri.ToString(),
                         Title = item.Title.Text,
                         PublDate = item.PublishDate.DateTime != DateTime.MinValue ? item.PublishDate.DateTime : purlDate.Value,
-                        Description = item.Summary.Text
+                        Description = item.Summary.Text,
+                        Source = StorySource.Blog
                     };
                 }
         }
+    }
+
+    public class TwitterSource : Source
+    {
+        public TwitterSource(string url): base(url){}
+
+        public override IEnumerable<Story> GetStories()
+        {
+            var reader = XmlReader.Create(Url);
+            var feed = SyndicationFeed.Load(reader);
+
+            if (feed != null)
+                foreach (var item in feed.Items)
+                {
+                    yield return new Story
+                    {
+                        Url = item.Links[0].Uri.ToString(),
+                        Title = item.Title.Text,
+                        PublDate = item.PublishDate.DateTime,
+                        Source = StorySource.Twitter
+                    };
+                }
+
+        }
+    }
+
+    public enum StorySource
+    {
+        Blog, Twitter
     }
 
     public class Story
@@ -68,6 +99,7 @@ namespace VoxPoliticus.Models
         public DateTime PublDate { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
+        public StorySource Source { get; set; }
     }
 
 }

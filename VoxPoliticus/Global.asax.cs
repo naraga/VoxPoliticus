@@ -18,7 +18,8 @@ namespace VoxPoliticus
                                   {
                                       new User{Id = "beblavy", Name = "Miroslav Beblavý", Sources = new Source[]
                                                                                                         {
-                                                                                                            new RssSource("http://beblavy.blog.sme.sk/rss/")
+                                                                                                            new RssSource("http://beblavy.blog.sme.sk/rss/"),
+                                                                                                            new TwitterSource("http://search.twitter.com/search.atom?q=from:beblavy&rpp=10"),
                                                                                                         }},
                                       new User{Id = "sulik", Name = "Richard Sulík", Sources = new Source[]
                                                                                                         {
