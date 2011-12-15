@@ -23,19 +23,23 @@ namespace VoxPoliticus.Models
 
     public abstract class Source
     {
+        public User User { get; set; }
+        public string Url { get; set; }
+
+        protected Source(string url)
+        {
+            Url = url;
+        }
+
         public abstract IEnumerable<Story> GetStories();
     }
 
 
     public class RssSource: Source
     {
-        public RssSource(string url)
+        public RssSource(string url) : base(url)
         {
-            Url = url;
         }
-
-        public User User { get; set; }
-        public string Url { get; set; }
 
         public override IEnumerable<Story> GetStories()
         {
