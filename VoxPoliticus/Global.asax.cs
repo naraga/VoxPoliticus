@@ -99,10 +99,17 @@ namespace VoxPoliticus
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                "DefaultIdAction", // Route name
+                "{id}", // URL with parameters
+                new {controller = "Feed", action = "Index"} // Parameter defaults
+                );
+
+            routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
                 new { controller = "Feed", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
+
 
         }
 
