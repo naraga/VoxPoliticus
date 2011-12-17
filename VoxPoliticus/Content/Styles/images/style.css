@@ -200,7 +200,8 @@ margin: 0 0 20px 15px;
 {
     background-color: black;
     color: white;
-    margin-left: 33px;
+    margin-left: 20px;
+    font-size: large;
 }
 
 .tag:hover

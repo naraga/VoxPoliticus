@@ -20,6 +20,7 @@ namespace VoxPoliticus.Models
             foreach (var story in Sources.SelectMany(source => source.GetStories()))
             {
                 story.User = this;
+                story.Tags = story.Tags.Union(Tags).ToArray();
                 yield return story;
             }
         }
@@ -60,6 +61,7 @@ namespace VoxPoliticus.Models
                         Title = item.Title.Text,
                         PublDate = item.PublishDate.DateTime != DateTime.MinValue ? item.PublishDate.DateTime : purlDate.Value,
                         Description = item.Summary.Text,
+                        Tags = new[] { "blog" },
                         Source = StorySource.Blog
                     };
                 }
@@ -83,7 +85,9 @@ namespace VoxPoliticus.Models
                         Url = item.Links[0].Uri.ToString(),
                         Title = item.Title.Text,
                         PublDate = item.PublishDate.DateTime,
+                        Tags = new[]{"twitter"},
                         Source = StorySource.Twitter
+                        
                     };
                 }
 
@@ -103,6 +107,7 @@ namespace VoxPoliticus.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public StorySource Source { get; set; }
+        public string[] Tags { get; set; }
     }
 
 }

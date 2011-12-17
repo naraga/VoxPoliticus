@@ -31,11 +31,12 @@
                     <td style="vertical-align:top; width: 100%;">
                         <div class="img">@GetImage(GetSourceIconUrl(item.Source), item.Source, 28, 28)</div>
                         <span class="itemTitle"><a href="">@item.Title</a></span>                        
-                        <div><a href="" class="UserName">@item.UserName</a><text> / </text><span style="color:Black;">@item.PubDate</span></div>
+                        <div>@Html.ActionLink(@item.UserName, "Index", new { @id = @item.UserId }, new { @class = "UserName" })
+                        <text> / </text><span style="color:Black;">@item.PubDate</span></div>
                         <div class="itemSummary">@item.Summary</div>
                         @foreach(var tag in item.Tags)
                         {
-                            <a href="" class="tag"><text>#</text>@tag</a>
+                            @Html.ActionLink("#"+@tag, "Index", new{@id=tag}, new{@class="tag"})
                         }
                     </td>
                 </tr>

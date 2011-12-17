@@ -17,6 +17,7 @@ namespace VoxPoliticus.Models.ViewModels
 
     public class FeedItemViewModel
     {
+        public string UserId { get; set; }
         public string UserName { get; set; }
         public string Title { get; set; }
         public string Summary { get; set; }
@@ -27,10 +28,11 @@ namespace VoxPoliticus.Models.ViewModels
 
         public FeedItemViewModel(Story story)
         {
+            UserId = story.User.Id;
             UserName = story.User.Name;
             Title = story.Title;
             Summary = story.Description;
-            Tags = story.User.Tags;
+            Tags = story.Tags;
             PubDate = story.PublDate;
             PhotoUrl = story.User.PhotoUrl;
             Source = story.Source.ToString();

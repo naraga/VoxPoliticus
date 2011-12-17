@@ -10,12 +10,30 @@ namespace VoxPoliticus.Controllers
 {
     public class FeedController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(string id)
         {
-            var stories = VoxPoliticusDatabase.Users.SelectMany(u => u.GetStories())
-                .OrderByDescending(s => s.PublDate).Take(50);
+            IEnumerable<Story> stories = null;
 
-            return View(new FeedViewModel(stories));
+            if (string.IsNullOrEmpty(id))
+                stories = VoxPoliticusDatabase.Users.SelectMany(u => u.GetStories());
+            else
+            {
+                var user = GetUser(id);
+                if (user != null)
+                    stories = user.GetStories();
+                else
+                {
+                    var searchTags = id.Split(',', ';', '+');
+                    stories = VoxPoliticusDatabase.Users.SelectMany(u => u.GetStories()).Where(s => s.Tags.Intersect(searchTags).Count() == searchTags.Count());
+                }
+            }
+
+            return View(new FeedViewModel(stories.OrderByDescending(s => s.PublDate).Take(50)));
+        }
+
+        private User GetUser(string id)
+        {
+            return VoxPoliticusDatabase.Users.SingleOrDefault(u => u.Id == id);
         }
     }
 }
