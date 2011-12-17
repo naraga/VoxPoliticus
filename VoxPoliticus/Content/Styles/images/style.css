@@ -2,7 +2,7 @@ body {
 	margin:0px 0; 
 	padding:0; 
 	font: 74% Arial, Sans-Serif; 
-	color:#ccc;  
+	color:black;  
 	line-height: 1.4em; 
 }
 
@@ -106,7 +106,7 @@ body {
 
 /* MAIN
 ---------------------------------------------------------------------------------------------------------------------------------------------------*/
-#main { background: #FFF; width: 760px; margin: 0 20px 0 20px; color: #808080; }  
+#main { background: #FFF; width: 700px; margin: 0 20px 0 20px; color: #808080;display: inline-block;}  
 #main .right_side { float: right;
 	padding:0px 0 0 10px; margin:0;
 	background-color: #FFF;
@@ -156,6 +156,13 @@ margin: 0 0 20px 15px;
 	color: #555;
 }
 
+
+/* LEFT
+--------------------------------------------------------------------------------------------------------------------------------------------------*/
+.left {
+    float: left;
+    width: 260px;
+}
 
 /* FOOTER
 ---------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -231,10 +238,26 @@ h1 a { color: #FFF; background: inherit; }
 
 h2 { 
 	color:#075181;
-	font-size:140%; 
+	font-size:120%; 
 	font-weight:bold; 
 	margin: 5px 0 5px 30px; 
 	/*padding: 0 0 0 30px; */
+}
+
+.itemTitle a
+{
+    background: #FFF; 
+    color: #A7090C !important;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.itemTitle hover { background: #FFF; color: red; text-decoration:none;  }
+
+.itemSummary
+{
+    padding-top: 10px;
+    text-indent: 25px;
 }
 
 h2 a { background: #FFF; color: #075181; }

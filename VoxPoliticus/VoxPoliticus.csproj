@@ -95,6 +95,7 @@
     <Content Include="Content\Styles\images\blogger.png" />
     <Content Include="Content\Styles\images\comment.gif" />
     <Content Include="Content\Styles\images\facebook.png" />
+    <Content Include="Content\Styles\images\fakeSide.jpg" />
     <Content Include="Content\Styles\images\footer.jpg" />
     <Content Include="Content\Styles\images\h.gif" />
     <Content Include="Content\Styles\images\h3.jpg" />
