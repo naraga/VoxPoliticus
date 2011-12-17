@@ -25,6 +25,7 @@ namespace VoxPoliticus.Models.ViewModels
         public string PhotoUrl { get; set; }
         public string Source { get; set; }
         public string[] Tags { get; set; }
+        public string Url { get; set; }
 
         public FeedItemViewModel(Story story)
         {
@@ -36,6 +37,7 @@ namespace VoxPoliticus.Models.ViewModels
             PubDate = story.PublDate;
             PhotoUrl = story.User.PhotoUrl;
             Source = story.Source.ToString();
+            Url = story.Url;
         }
     }
     

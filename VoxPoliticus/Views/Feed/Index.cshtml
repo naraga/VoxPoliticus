@@ -30,7 +30,7 @@
                     <td style="width: 100px;"><div class="img bordered" style="margin-left: 50px;">@GetImage(item.PhotoUrl, item.UserName, 80, 80)</div></td>
                     <td style="vertical-align:top; width: 100%;">
                         <div class="img">@GetImage(GetSourceIconUrl(item.Source), item.Source, 28, 28)</div>
-                        <span class="itemTitle"><a href="">@item.Title</a></span>                        
+                        <span class="itemTitle"><a href="@item.Url">@item.Title</a></span>                        
                         <div>@Html.ActionLink(@item.UserName, "Index", new { @id = @item.UserId }, new { @class = "UserName" })
                         <text> / </text><span style="color:Black;">@item.PubDate</span></div>
                         <div class="itemSummary">@item.Summary</div>
