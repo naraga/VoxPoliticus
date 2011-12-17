@@ -3,14 +3,20 @@
 @{
     ViewBag.Title = "Stories";
 }
-
 <h2>Feed</h2>
 
 <ul>
 @foreach (var item in Model.FeedItems)
 {
-    <li>
+        <table style="width: 100%;">
+            <tr><td colspan="2"><div class="img"><img src="../../Content/Styles/images/twitter.png" alt="" /></div><h2><a href="">@item.UserName</a></h2><h3>@item.PubDate</h3></td></tr>
+            <tr><td><div class="img"><img src="../../Content/Styles/images/img2.jpg" alt="" /></div></td><td>@item.Title</td></tr>
+            <tr><td colspan="2"><p class="date"> <img src="../../Content/Styles/images/more.gif" alt="" /> <a href="http://t.co/7yyuvGwg">Read more</a> <img src="../../Content/Styles/images/comment.gif" alt="" /> <a href="">Comments (3)</a> <img src="../../Content/Styles/images/timeicon.gif" alt="" /></p></td></tr>
+        </table>
+        <br />
+
+@*    <li>
     <span>@item.PubDate</span><span style="font-weight:bold">@item.UserName [@item.Source]</span><span>@item.Title</span>
-    </li>
+    </li>*@
 }
 </ul>

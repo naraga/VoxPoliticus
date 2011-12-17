@@ -90,6 +90,24 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Styles\images\arrow.gif" />
+    <Content Include="Content\Styles\images\bg.jpg" />
+    <Content Include="Content\Styles\images\blogger.png" />
+    <Content Include="Content\Styles\images\comment.gif" />
+    <Content Include="Content\Styles\images\facebook.png" />
+    <Content Include="Content\Styles\images\footer.jpg" />
+    <Content Include="Content\Styles\images\h.gif" />
+    <Content Include="Content\Styles\images\h3.jpg" />
+    <Content Include="Content\Styles\images\header.jpg" />
+    <Content Include="Content\Styles\images\img.jpg" />
+    <Content Include="Content\Styles\images\img2.jpg" />
+    <Content Include="Content\Styles\images\li.png" />
+    <Content Include="Content\Styles\images\mainbg.jpg" />
+    <Content Include="Content\Styles\images\more.gif" />
+    <Content Include="Content\Styles\images\style.css" />
+    <Content Include="Content\Styles\images\timeicon.gif" />
+    <Content Include="Content\Styles\images\top.jpg" />
+    <Content Include="Content\Styles\images\twitter.png" />
     <Content Include="Content\themes\base\jquery.ui.accordion.css" />
     <Content Include="Content\themes\base\jquery.ui.all.css" />
     <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
