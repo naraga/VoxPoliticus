@@ -98,6 +98,8 @@
     <Content Include="Content\LocalData\kanik_photo.jpg" />
     <Content Include="Content\LocalData\poliacik_photo.jpg" />
     <Content Include="Content\LocalData\poliacik_smeblog_rss.xml" />
+    <Content Include="Content\LocalData\slota_photo.jpg" />
+    <Content Include="Content\LocalData\slota_smeblog_rss.xml" />
     <Content Include="Content\LocalData\sulik_photo.jpg" />
     <Content Include="Content\LocalData\sulik_smeblog_rss.xml" />
     <Content Include="Content\Styles\images\arrow.gif" />

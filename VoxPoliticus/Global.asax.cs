@@ -73,7 +73,17 @@ namespace VoxPoliticus
                                                                        new RssSource(GetConfigValue("poliacik_smeblog_rss")),
                                                                        new TwitterSource(GetConfigValue("poliacik_twitter_atom")),
                                                                    }
-                                                 }
+                                                 },
+                                             new User
+                                                 {
+                                                     Id = "slota", Name = "Ján Slota",
+                                                     PhotoUrl = GetConfigValue("slota_photo"),
+                                                     Tags = new[]{"sns"},
+                                                     Sources = new Source[]
+                                                                   {
+                                                                       new RssSource(GetConfigValue("slota_smeblog_rss"))
+                                                                   }
+                                                 },
                                          };
     }
 
