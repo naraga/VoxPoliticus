@@ -63,7 +63,17 @@ namespace VoxPoliticus
                                                                        new RssSource(GetConfigValue("kanik_hnonlineblog_rss"))
                                                                    }
                                                  },
-
+                                             new User
+                                                 {
+                                                     Id = "poliacik", Name = "Martin Poliačik",
+                                                     PhotoUrl = GetConfigValue("poliacik_photo"),
+                                                     Tags = new[]{"sas"},
+                                                     Sources = new Source[]
+                                                                   {
+                                                                       new RssSource(GetConfigValue("poliacik_smeblog_rss")),
+                                                                       new TwitterSource(GetConfigValue("poliacik_twitter_atom")),
+                                                                   }
+                                                 }
                                          };
     }
 
