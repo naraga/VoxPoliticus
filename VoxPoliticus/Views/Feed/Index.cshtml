@@ -13,19 +13,29 @@
 @{
     ViewBag.Title = "Stories";
 }
-<h2>Feed</h2>
-
+<div class="title">VOX POLITICUS</div>
+<div class="topBanner"></div>
 <div class="left">
-    <img src="../../Content/Styles/images/fakeSide.jpg" />
+    <div class="rightText" style="margin-top: 20px;">SDKU</div>
+    <div class="rightText">SMER</div>
+    <div class="rightText">SNS</div>
+    <div class="rightText">SAS</div>
+    <div class="rightText">Dalsie</div>
 </div>
 <div id="main">
     @foreach (var item in Model.FeedItems)
     {
-            <table style="border-bottom: 1px solid #E9E9E9; width: 100%; margin-top: 10px;">
-                <tr><td style="width: 200px;"><div class="img" style="margin-left: 50px;">@GetImage(item.PhotoUrl, item.UserName, 80, 80)</div></td><td style="vertical-align:top"><span class="itemTitle"><a href="">@item.Title</a></span>
-                <div class="itemSummary">@item.Summary</div>
-                </td></tr>
-                <tr ><td style="width: 200px;"><div class="img">@GetImage(GetSourceIconUrl(item.Source), item.Source, 28, 28)</div><h2><a href="">@item.UserName</a></h2>@item.PubDate</td><td></td></tr>
+            <table style="border-bottom: 3px solid black;; width: 100%; margin-top: 10px;">
+                <tr>
+                    <td style="width: 100px;"><div class="img bordered" style="margin-left: 50px;">@GetImage(item.PhotoUrl, item.UserName, 80, 80)</div></td>
+                    <td style="vertical-align:top; width: 100%;">
+                        <div class="img">@GetImage(GetSourceIconUrl(item.Source), item.Source, 28, 28)</div>
+                        <span class="itemTitle"><a href="">@item.Title</a></span>                        
+                        <div><a href="" class="UserName">@item.UserName</a><text> / </text><span style="color:Black;">@item.PubDate</span></div>
+                        <div class="itemSummary">@item.Summary</div>
+                    </td>
+                </tr>
+                <tr ><td style="width: 200px;"><h2></h2></td><td></td></tr>
             </table>
     }
 </div>

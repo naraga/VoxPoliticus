@@ -110,6 +110,7 @@
     <Content Include="Content\Styles\images\header.jpg" />
     <Content Include="Content\Styles\images\img.jpg" />
     <Content Include="Content\Styles\images\img2.jpg" />
+    <Content Include="Content\Styles\images\BannerPartial.jpg" />
     <Content Include="Content\Styles\images\li.png" />
     <Content Include="Content\Styles\images\mainbg.jpg" />
     <Content Include="Content\Styles\images\more.gif" />
