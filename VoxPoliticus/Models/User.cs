@@ -12,6 +12,8 @@ namespace VoxPoliticus.Models
         public string Name { get; set; }
         public string Id { get; set; }
         public string PhotoUrl { get; set; }
+        public string[] Tags { get; set; }
+
         public IEnumerable<Source> Sources { get; set; }
         public IEnumerable<Story> GetStories()
         {

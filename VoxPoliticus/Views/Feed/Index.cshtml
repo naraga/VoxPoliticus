@@ -25,7 +25,7 @@
 <div id="main">
     @foreach (var item in Model.FeedItems)
     {
-            <table style="border-bottom: 3px solid black;; width: 100%; margin-top: 10px;">
+            <table style="border-bottom: 3px solid black; width: 100%;">
                 <tr>
                     <td style="width: 100px;"><div class="img bordered" style="margin-left: 50px;">@GetImage(item.PhotoUrl, item.UserName, 80, 80)</div></td>
                     <td style="vertical-align:top; width: 100%;">
@@ -33,6 +33,10 @@
                         <span class="itemTitle"><a href="">@item.Title</a></span>                        
                         <div><a href="" class="UserName">@item.UserName</a><text> / </text><span style="color:Black;">@item.PubDate</span></div>
                         <div class="itemSummary">@item.Summary</div>
+                        @foreach(var tag in item.Tags)
+                        {
+                            <a href="" class="tag"><text>#</text>@tag</a>
+                        }
                     </td>
                 </tr>
                 <tr ><td style="width: 200px;"><h2></h2></td><td></td></tr>
