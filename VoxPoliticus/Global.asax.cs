@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -13,44 +14,49 @@ namespace VoxPoliticus
 
     public static class VoxPoliticusDatabase
     {
+        public static string GetConfigValue(string key)
+        {
+            return ConfigurationManager.AppSettings[key];
+        }
+
         //
         public static User[] Users = new[]
                                          {
                                              new User
                                                  {
                                                      Id = "beblavy", Name = "Miroslav Beblavý",
-                                                     PhotoUrl = "http://beblavy.blog.sme.sk/bloger/3955/bloger_932.jpg",
+                                                     PhotoUrl = GetConfigValue("beblavy_photo"),
                                                      Sources = new Source[]
                                                                    {
-                                                                       new RssSource("http://beblavy.blog.sme.sk/rss/"),
-                                                                       new TwitterSource("http://search.twitter.com/search.atom?q=from:beblavy&rpp=10"),
+                                                                       new RssSource(GetConfigValue("beblavy_smeblog_rss")),
+                                                                       new TwitterSource(GetConfigValue("beblavy_twitter_atom")),
                                                                    }
                                                  },
                                              new User
                                                  {
                                                      Id = "sulik", Name = "Richard Sulík",
-                                                     PhotoUrl = "http://i.pravda.sk/10/031/skcl/P23318366_sulik.jpg",
+                                                     PhotoUrl = GetConfigValue("sulik_photo"),
                                                      Sources = new Source[]
                                                                    {
-                                                                       new RssSource("http://richardsulik.blog.sme.sk/rss/")
+                                                                       new RssSource(GetConfigValue("sulik_smeblog_rss"))
                                                                    }
                                                  },
                                              new User
                                                  {
                                                      Id = "fico", Name = "Robert Fico",
-                                                     PhotoUrl = "http://www.topnews.in/files/robert-fico.jpg",
+                                                     PhotoUrl = GetConfigValue("fico_photo"),
                                                      Sources = new Source[]
                                                                    {
-                                                                       new RssSource("http://fico.blog.sme.sk/rss/")
+                                                                       new RssSource(GetConfigValue("fico_smeblog_rss"))
                                                                    }
                                                  },
                                              new User
                                                  {
                                                      Id = "kanik", Name = "Ľudovít Kaník",
-                                                     PhotoUrl = "http://dotankoch.sk/portret/ludovit-kanik",
+                                                     PhotoUrl = GetConfigValue("kanik_photo"),
                                                      Sources = new Source[]
                                                                    {
-                                                                       new RssSource("http://moje.hnonline.sk/blog/1946/feed")
+                                                                       new RssSource(GetConfigValue("kanik_hnonlineblog_rss"))
                                                                    }
                                                  },
 

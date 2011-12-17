@@ -90,6 +90,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\LocalData\beblavy_photo.jpg" />
+    <Content Include="Content\LocalData\beblavy_smeblog_rss.xml" />
+    <Content Include="Content\LocalData\fico_photo.jpg" />
+    <Content Include="Content\LocalData\fico_smeblog_rss.xml" />
+    <Content Include="Content\LocalData\kanik_nhonlineblog_rss.xml" />
+    <Content Include="Content\LocalData\kanik_photo.jpg" />
+    <Content Include="Content\LocalData\sulik_photo.jpg" />
+    <Content Include="Content\LocalData\sulik_smeblog_rss.xml" />
     <Content Include="Content\Styles\images\arrow.gif" />
     <Content Include="Content\Styles\images\bg.jpg" />
     <Content Include="Content\Styles\images\blogger.png" />
@@ -202,7 +210,9 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Content\LocalData\beblavy_twitter.atom" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
