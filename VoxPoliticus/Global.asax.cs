@@ -15,26 +15,46 @@ namespace VoxPoliticus
     {
         //
         public static User[] Users = new[]
-                                  {
-                                      new User{Id = "beblavy", Name = "Miroslav Beblavý", Sources = new Source[]
-                                                                                                        {
-                                                                                                            new RssSource("http://beblavy.blog.sme.sk/rss/"),
-                                                                                                            new TwitterSource("http://search.twitter.com/search.atom?q=from:beblavy&rpp=10"),
-                                                                                                        }},
-                                      new User{Id = "sulik", Name = "Richard Sulík", Sources = new Source[]
-                                                                                                        {
-                                                                                                            new RssSource("http://richardsulik.blog.sme.sk/rss/")
-                                                                                                        }},
-                                      new User{Id = "fico", Name = "Robert Fico", Sources = new Source[]
-                                                                                                        {
-                                                                                                            new RssSource("http://fico.blog.sme.sk/rss/")
-                                                                                                        }},
-                                      new User{Id = "kanik", Name = "Ľudovít Kaník", Sources = new Source[]
-                                                                                                        {
-                                                                                                            new RssSource("http://moje.hnonline.sk/blog/1946/feed")
-                                                                                                        }},
+                                         {
+                                             new User
+                                                 {
+                                                     Id = "beblavy", Name = "Miroslav Beblavý",
+                                                     PhotoUrl = "http://beblavy.blog.sme.sk/bloger/3955/bloger_932.jpg",
+                                                     Sources = new Source[]
+                                                                   {
+                                                                       new RssSource("http://beblavy.blog.sme.sk/rss/"),
+                                                                       new TwitterSource("http://search.twitter.com/search.atom?q=from:beblavy&rpp=10"),
+                                                                   }
+                                                 },
+                                             new User
+                                                 {
+                                                     Id = "sulik", Name = "Richard Sulík",
+                                                     PhotoUrl = "http://i.pravda.sk/10/031/skcl/P23318366_sulik.jpg",
+                                                     Sources = new Source[]
+                                                                   {
+                                                                       new RssSource("http://richardsulik.blog.sme.sk/rss/")
+                                                                   }
+                                                 },
+                                             new User
+                                                 {
+                                                     Id = "fico", Name = "Robert Fico",
+                                                     PhotoUrl = "http://www.topnews.in/files/robert-fico.jpg",
+                                                     Sources = new Source[]
+                                                                   {
+                                                                       new RssSource("http://fico.blog.sme.sk/rss/")
+                                                                   }
+                                                 },
+                                             new User
+                                                 {
+                                                     Id = "kanik", Name = "Ľudovít Kaník",
+                                                     PhotoUrl = "http://dotankoch.sk/portret/ludovit-kanik",
+                                                     Sources = new Source[]
+                                                                   {
+                                                                       new RssSource("http://moje.hnonline.sk/blog/1946/feed")
+                                                                   }
+                                                 },
 
-                                  };
+                                         };
     }
 
     public class MvcApplication : System.Web.HttpApplication
