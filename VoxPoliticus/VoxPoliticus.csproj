@@ -109,6 +109,7 @@
     <Content Include="Content\Styles\images\Banner.jpg" />
     <Content Include="Content\Styles\images\bg.jpg" />
     <Content Include="Content\Styles\images\blogger.png" />
+    <Content Include="Content\Styles\images\Border.png" />
     <Content Include="Content\Styles\images\comment.gif" />
     <Content Include="Content\Styles\images\facebook.png" />
     <Content Include="Content\Styles\images\fakeSide.jpg" />

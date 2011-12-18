@@ -37,7 +37,7 @@
                     <td style="vertical-align:top; width: 100%;">
                         <div class="img">@GetImage(GetSourceIconUrl(item.Source), item.Source, 28, 28)</div>
                         <div>@Html.ActionLink(@item.UserName, "Index", new { @id = @item.UserId }, new { @class = "UserName" })
-                        <text> / </text><span style="color:Black;">@item.PubDate</span></div>
+                        <text> / </text><span style="color:#808080;">@item.PubDate</span></div>
                         <span class="itemTitle"><a href="@item.Url">@item.Title</a></span>                        
                        
                         <div class="itemSummary">@Html.Raw(item.Summary)</div>
@@ -47,7 +47,7 @@
                         }
                     </td>
                 </tr>
-                <tr ><td style="width: 200px;"><h2></h2></td><td></td></tr>
+                
             </table>
         <div class="itemSeparator"></div>
     }
