@@ -145,7 +145,7 @@ table {
 
 /* MAIN
 ---------------------------------------------------------------------------------------------------------------------------------------------------*/
-#main { background: #FFF; width: 720px; margin: 0 20px 0 20px; color: #808080;display: inline-block;}  
+#main { background: #FFF; width: 670px; margin: 0 20px 0 20px; color: #808080;display: inline-block;}  
 #main .right_side { float: right;
 	padding:0px 0 0 10px; margin:0;
 	background-color: #FFF;
