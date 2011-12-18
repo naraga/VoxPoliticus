@@ -125,6 +125,7 @@
     <Content Include="Content\Styles\images\Menu.css" />
     <Content Include="Content\Styles\images\more.gif" />
     <Content Include="Content\Styles\images\style.css" />
+    <Content Include="Content\Styles\images\Tags.css" />
     <Content Include="Content\Styles\images\timeicon.gif" />
     <Content Include="Content\Styles\images\top.jpg" />
     <Content Include="Content\Styles\images\twitter.png" />

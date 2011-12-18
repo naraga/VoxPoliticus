@@ -33,19 +33,23 @@
     {
             <table>
                 <tr>
-                    <td style="width: 100px;"><div class="img"  style="margin-left: 50px;">@GetImage(item.PhotoUrl, item.UserName, 80, 80)</div></td>
+                    <td style="width: 100px;"><div class="img"  style="margin-left: 10px;">@GetImage(item.PhotoUrl, item.UserName, 80, 80)</div></td>
                     <td style="vertical-align:top; width: 100%;">
-                        <div class="img">@GetImage(GetSourceIconUrl(item.Source), item.Source, 28, 28)</div>
+                        <div class="img">@GetImage(GetSourceIconUrl(item.Source), item.Source, 20, 20)</div>
                         <div>@Html.ActionLink(@item.UserName, "Index", new { @id = @item.UserId }, new { @class = "UserName" })
                         <text> / </text><span style="color:#808080;">@item.PubDate</span></div>
-                        <span class="itemTitle"><a href="@item.Url">@item.Title</a></span>                        
+                        <span class="itemTitle"><a href="@item.Url">@item.Title</a></span>      
+                        <div class="itemSummary"><text>@Html.Raw(item.Summary)</text></div>
                        
-                        <div class="itemSummary">@Html.Raw(item.Summary)</div>
-                        @foreach(var tag in item.Tags)
-                        {
-                            @Html.ActionLink("#"+@tag, "Index", new{@id=tag}, new{@class="tag"})
-                        }
                     </td>
+                </tr>
+                <tr style="height: 20px;">
+                <td></td>
+                <td>@foreach (var tag in item.Tags)
+                    {
+                        @Html.ActionLink(@tag, "Index", new { @id = tag }, new { @class = "fg-button ui-state-default ui-corner-all" })
+                    }</td>
+                    
                 </tr>
                 
             </table>

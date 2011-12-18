@@ -73,9 +73,13 @@ p
     margin-left: 30px;
 }
 
-    ul#sliding-navigation li.sliding-element h3  
-    {  
-        color: #fff;  
-        background:#333 url(heading_bg.jpg) repeat-y;  
-        font-weight: normal;  
-    }  
+ul#sliding-navigation li.sliding-element h3  
+{  
+    color: #fff;  
+    background:#333 url(heading_bg.jpg) repeat-y; 
+}  
+
+.sliding-element a {
+    font-weight: normal;
+    font-size: 140%;
+}
