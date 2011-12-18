@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.ServiceModel.Syndication;
 using System.Xml;
 using TweetSharp;
@@ -21,6 +23,7 @@ namespace VoxPoliticus.Models
             {
                 story.User = this;
                 story.Tags = story.Tags.Union(Tags).ToArray();
+                story.InferTags();
                 yield return story;
             }
         }
@@ -90,13 +93,57 @@ namespace VoxPoliticus.Models
                         
                     };
                 }
+        }
+    }
 
+
+    public class FacebookSource : Source
+    {
+        public FacebookSource(string url) : base(url) { }
+
+        public override IEnumerable<Story> GetStories()
+        {
+            XmlReader reader;
+            if (Url.StartsWith("http"))
+            {
+                var req = (HttpWebRequest) WebRequest.Create(Url);
+                req.Method = "GET";
+                req.UserAgent = "Fiddler";
+
+                var rep = req.GetResponse();
+                reader = XmlReader.Create(rep.GetResponseStream());
+            }
+            else
+                reader = XmlReader.Create(Url);
+
+            
+            var feed = SyndicationFeed.Load(reader);
+
+            //var writer = XmlWriter.Create("c:\\Proj\\VoxPoliticus\\VoxPoliticus\\Content\\LocalData\\atom10.atom");
+            //feed.SaveAsAtom10(writer);
+            //writer.Flush();
+            //writer.Close();
+            
+
+            if (feed != null)
+                foreach (var item in feed.Items)
+                {
+                yield return new Story
+                {
+                    Url = item.Links[0].Uri.ToString(),
+                    Title = item.Title.Text,
+                    Description = item.Content as TextSyndicationContent != null ? ((TextSyndicationContent)item.Content).Text: string.Empty,
+                    PublDate = item.PublishDate.DateTime,
+                    Tags = new[] { "facebook" },
+                    Source = StorySource.Facebook
+                };
+            }
         }
     }
 
     public enum StorySource
     {
-        Blog, Twitter
+        Blog, Twitter, Facebook
     }
 
     public class Story
@@ -108,6 +155,28 @@ namespace VoxPoliticus.Models
         public string Description { get; set; }
         public StorySource Source { get; set; }
         public string[] Tags { get; set; }
+
+        public void InferTags()
+        {
+            if (StoryContains("ESFS") || StoryContains("euroval"))
+                AddTag("euroval");
+        }
+
+        void AddTag(string tag)
+        {
+            Tags = Tags.Union(new[]{tag}).ToArray();
+        }
+
+        bool StoryContains(string s)
+        {
+            if (Title != null)
+                return Title.ToUpper().Contains(s.ToUpper());
+            
+            if (Description != null)
+                return Description.ToUpper().Contains(s.ToUpper());
+
+            return false;
+        }
     }
 
 }

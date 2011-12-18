@@ -31,7 +31,7 @@ namespace VoxPoliticus.Controllers
             return View(new FeedViewModel(stories.OrderByDescending(s => s.PublDate).Take(50)));
         }
 
-        private User GetUser(string id)
+        private static User GetUser(string id)
         {
             return VoxPoliticusDatabase.Users.SingleOrDefault(u => u.Id == id);
         }

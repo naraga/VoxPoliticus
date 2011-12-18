@@ -33,7 +33,7 @@
                         <span class="itemTitle"><a href="@item.Url">@item.Title</a></span>                        
                         <div>@Html.ActionLink(@item.UserName, "Index", new { @id = @item.UserId }, new { @class = "UserName" })
                         <text> / </text><span style="color:Black;">@item.PubDate</span></div>
-                        <div class="itemSummary">@item.Summary</div>
+                        <div class="itemSummary">@Html.Raw(item.Summary)</div>
                         @foreach(var tag in item.Tags)
                         {
                             @Html.ActionLink("#"+@tag, "Index", new{@id=tag}, new{@class="tag"})

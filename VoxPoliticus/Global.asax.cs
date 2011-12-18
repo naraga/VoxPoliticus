@@ -26,7 +26,7 @@ namespace VoxPoliticus
                                                  {
                                                      Id = "beblavy", Name = "Miroslav Beblavý",
                                                      PhotoUrl = GetConfigValue("beblavy_photo"),
-                                                     Tags = new[]{"sdku"},
+                                                     Tags = new[]{"sdku", "beblavy"},
                                                      Sources = new Source[]
                                                                    {
                                                                        new RssSource(GetConfigValue("beblavy_smeblog_rss")),
@@ -37,17 +37,18 @@ namespace VoxPoliticus
                                                  {
                                                      Id = "sulik", Name = "Richard Sulík",
                                                      PhotoUrl = GetConfigValue("sulik_photo"),
-                                                     Tags = new[]{"sas"},
+                                                     Tags = new[]{"sas","sulik"},
                                                      Sources = new Source[]
                                                                    {
-                                                                       new RssSource(GetConfigValue("sulik_smeblog_rss"))
+                                                                       new RssSource(GetConfigValue("sulik_smeblog_rss")),
+                                                                       new FacebookSource(GetConfigValue("sulik_fb_atom")),
                                                                    }
                                                  },
                                              new User
                                                  {
                                                      Id = "fico", Name = "Robert Fico",
                                                      PhotoUrl = GetConfigValue("fico_photo"),
-                                                     Tags = new[]{"smer"},
+                                                     Tags = new[]{"smer", "fico"},
                                                      Sources = new Source[]
                                                                    {
                                                                        new RssSource(GetConfigValue("fico_smeblog_rss"))
@@ -57,7 +58,7 @@ namespace VoxPoliticus
                                                  {
                                                      Id = "kanik", Name = "Ľudovít Kaník",
                                                      PhotoUrl = GetConfigValue("kanik_photo"),
-                                                     Tags = new[]{"sdku"},
+                                                     Tags = new[]{"sdku", "kanik"},
                                                      Sources = new Source[]
                                                                    {
                                                                        new RssSource(GetConfigValue("kanik_hnonlineblog_rss"))
@@ -67,7 +68,7 @@ namespace VoxPoliticus
                                                  {
                                                      Id = "poliacik", Name = "Martin Poliačik",
                                                      PhotoUrl = GetConfigValue("poliacik_photo"),
-                                                     Tags = new[]{"sas"},
+                                                     Tags = new[]{"sas", "poliacik"},
                                                      Sources = new Source[]
                                                                    {
                                                                        new RssSource(GetConfigValue("poliacik_smeblog_rss")),
@@ -78,7 +79,7 @@ namespace VoxPoliticus
                                                  {
                                                      Id = "slota", Name = "Ján Slota",
                                                      PhotoUrl = GetConfigValue("slota_photo"),
-                                                     Tags = new[]{"sns"},
+                                                     Tags = new[]{"sns", "slota"},
                                                      Sources = new Source[]
                                                                    {
                                                                        new RssSource(GetConfigValue("slota_smeblog_rss"))
