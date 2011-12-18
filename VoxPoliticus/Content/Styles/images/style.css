@@ -8,7 +8,17 @@ body
 }  
 
 table {
-    background: none repeat scroll 0 0 #1D1D1D;
+    background: none repeat scroll 0 0 #1D1D1D;    
+}
+
+.itemSeparator
+{
+    background-image: url('Border.png');
+    background-repeat: repeat-x;
+    height: 2px;
+    width: 100%;
+    padding-bottom: 5px;
+    background-color: #1D1D1D;    
 }
 
 .content { 
@@ -94,9 +104,13 @@ table {
 
 .topBanner
 {
-    background-image: url('BannerPartial.jpg');
-    width: 1024px;
-    height: 225px;
+    background-image: url('Logo.png');    
+    height: 185px;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .title
@@ -111,7 +125,7 @@ table {
 
 .UserName
 {
-    color: #cf00aa;
+    color: #E3D5D9;
 }
 
 

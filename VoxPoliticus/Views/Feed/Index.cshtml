@@ -13,31 +13,33 @@
 @{
     ViewBag.Title = "Stories";
 }
-<div class="title">VOX POLITICUS</div>
-@*<div class="topBanner"></div>*@
+
+<div class="topBanner"></div>
 <div id="hide"><img src="../../Content/Styles/images/backgroundLeft.jpg" alt=""/></div>
 <div id="navigation-block"> 
         <ul id="sliding-navigation">  
-        <li class="sliding-element"><h3>Navigation Title</h3></li>  
-        <li class="sliding-element"><a href="#">Link 1</a></li>  
-        <li class="sliding-element"><a href="#">Link 2</a></li>  
-        <li class="sliding-element"><a href="#">Link 3</a></li>  
-        <li class="sliding-element"><a href="#">Link 4</a></li>  
-        <li class="sliding-element"><a href="#">Link 5</a></li>  
+        <li class="sliding-element"><h3>Politicý klub</h3></li>  
+        <li class="sliding-element">@Html.ActionLink("SDKU", "Index", new{@id="sdku"})</li>  
+        <li class="sliding-element">@Html.ActionLink("SMER", "Index", new{@id="smer"})</li>  
+        <li class="sliding-element">@Html.ActionLink("SAS", "Index", new{@id="sas"})</li>  
+        <li class="sliding-element">@Html.ActionLink("SNS", "Index", new{@id="sns"})</li>  
+        <li class="sliding-element">@Html.ActionLink("KDH", "Index", new{@id="kdh"})</li>  
+        <li class="sliding-element">@Html.ActionLink("HZDS", "Index", new{@id="hzds"})</li>  
     </ul> 
 </div>
 
 <div id="main">
     @foreach (var item in Model.FeedItems)
     {
-            <table style="border-bottom: 3px solid black; width: 100%;">
+            <table>
                 <tr>
-                    <td style="width: 100px;"><div class="img bordered" style="margin-left: 50px;">@GetImage(item.PhotoUrl, item.UserName, 80, 80)</div></td>
+                    <td style="width: 100px;"><div class="img"  style="margin-left: 50px;">@GetImage(item.PhotoUrl, item.UserName, 80, 80)</div></td>
                     <td style="vertical-align:top; width: 100%;">
                         <div class="img">@GetImage(GetSourceIconUrl(item.Source), item.Source, 28, 28)</div>
-                        <span class="itemTitle"><a href="@item.Url">@item.Title</a></span>                        
                         <div>@Html.ActionLink(@item.UserName, "Index", new { @id = @item.UserId }, new { @class = "UserName" })
                         <text> / </text><span style="color:Black;">@item.PubDate</span></div>
+                        <span class="itemTitle"><a href="@item.Url">@item.Title</a></span>                        
+                       
                         <div class="itemSummary">@Html.Raw(item.Summary)</div>
                         @foreach(var tag in item.Tags)
                         {
@@ -47,6 +49,7 @@
                 </tr>
                 <tr ><td style="width: 200px;"><h2></h2></td><td></td></tr>
             </table>
+        <div class="itemSeparator"></div>
     }
 </div>
 

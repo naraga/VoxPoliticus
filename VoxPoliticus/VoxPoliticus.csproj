@@ -127,6 +127,7 @@
     <Content Include="Content\Styles\images\timeicon.gif" />
     <Content Include="Content\Styles\images\top.jpg" />
     <Content Include="Content\Styles\images\twitter.png" />
+    <Content Include="Content\Styles\images\Logo.png" />
     <Content Include="Content\themes\base\jquery.ui.accordion.css" />
     <Content Include="Content\themes\base\jquery.ui.all.css" />
     <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
