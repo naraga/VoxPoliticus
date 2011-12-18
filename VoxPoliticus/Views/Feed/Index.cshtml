@@ -14,10 +14,12 @@
     ViewBag.Title = "Stories";
 }
 
-<div class="topBanner"></div>
-<div id="hide"><img src="../../Content/Styles/images/backgroundLeft.jpg" alt=""/></div>
-<div id="navigation-block"> 
-        <ul id="sliding-navigation">  
+<a href="/"><div class="topBanner"></div></a>
+
+<div class="leftMenu">
+<div class="hide"><img src="../../Content/Styles/images/backgroundLeft.jpg" alt=""/></div>
+<div class="navigation-block"> 
+        <ul class="sliding-navigation">  
         <li class="sliding-element"><h3>Politicý klub</h3></li>  
         <li class="sliding-element">@Html.ActionLink("SDKU", "Index", new{@id="sdku"})</li>  
         <li class="sliding-element">@Html.ActionLink("SMER", "Index", new{@id="smer"})</li>  
@@ -26,6 +28,14 @@
         <li class="sliding-element">@Html.ActionLink("KDH", "Index", new{@id="kdh"})</li>  
         <li class="sliding-element">@Html.ActionLink("HZDS", "Index", new{@id="hzds"})</li>  
     </ul> 
+</div>
+
+<div class="navigation-block"> 
+        <ul class="sliding-navigation">   
+        <li class="sliding-element"><h3>Horúce témy</h3></li>       
+        <li class="sliding-element">@Html.ActionLink("Euroval", "Index", new{@id="euroval"})</li>  
+    </ul> 
+</div>
 </div>
 
 <div id="main">

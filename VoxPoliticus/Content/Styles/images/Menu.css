@@ -1,13 +1,13 @@
 ﻿ /*MENU*/
-ul#sliding-navigation  
+ul.sliding-navigation  
 {  
     list-style: none;  
     font-size: .75em;  
     margin: 30px 0;  
 }  
   
-ul#sliding-navigation li.sliding-element h3,  
-ul#sliding-navigation li.sliding-element a  
+ul.sliding-navigation li.sliding-element h3,  
+ul.sliding-navigation li.sliding-element a  
 {  
     display: block;  
     width: 150px;  
@@ -16,7 +16,7 @@ ul#sliding-navigation li.sliding-element a
     margin-bottom: 5px;  
 }  
   
-ul#sliding-navigation li.sliding-element h3  
+ul.sliding-navigation li.sliding-element h3  
 {  
     color: #fff;  
     background: #333;  
@@ -24,7 +24,7 @@ ul#sliding-navigation li.sliding-element h3
     font-weight: normal;  
 }  
   
-ul#sliding-navigation li.sliding-element a  
+ul.sliding-navigation li.sliding-element a  
 {  
     color: #999;  
     background: #222;  
@@ -32,7 +32,7 @@ ul#sliding-navigation li.sliding-element a
     text-decoration: none;  
 }  
   
-ul#sliding-navigation li.sliding-element a:hover { color: #ffff66; }  
+ul.sliding-navigation li.sliding-element a:hover { color: #ffff66; }  
     
     h2  
 {  
@@ -56,13 +56,13 @@ p
     padding-left:15px;  
 }  
   
-#navigation-block {
+.navigation-block {
     margin-left: 5px;
     float: left;
     width: 180px;
 }  
   
-#hide 
+.hide 
 {
     width: 30px;
     float: left;  
@@ -73,7 +73,7 @@ p
     margin-left: 30px;
 }
 
-ul#sliding-navigation li.sliding-element h3  
+ul.sliding-navigation li.sliding-element h3  
 {  
     color: #fff;  
     background:#333 url(heading_bg.jpg) repeat-y; 
@@ -82,4 +82,11 @@ ul#sliding-navigation li.sliding-element h3
 .sliding-element a {
     font-weight: normal;
     font-size: 140%;
+}
+
+.leftMenu
+{
+    display: inline-block;
+    width: 220px;
+    float: left;
 }
