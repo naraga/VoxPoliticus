@@ -103,6 +103,9 @@
     <Content Include="Content\LocalData\sulik_photo.jpg" />
     <Content Include="Content\LocalData\sulik_smeblog_rss.xml" />
     <Content Include="Content\Styles\images\arrow.gif" />
+    <Content Include="Content\Styles\images\background.jpg" />
+    <Content Include="Content\Styles\images\backgroundLeft.jpg" />
+    <Content Include="Content\Styles\images\backgroundRigt.jpg" />
     <Content Include="Content\Styles\images\Banner.jpg" />
     <Content Include="Content\Styles\images\bg.jpg" />
     <Content Include="Content\Styles\images\blogger.png" />
@@ -118,6 +121,7 @@
     <Content Include="Content\Styles\images\BannerPartial.jpg" />
     <Content Include="Content\Styles\images\li.png" />
     <Content Include="Content\Styles\images\mainbg.jpg" />
+    <Content Include="Content\Styles\images\Menu.css" />
     <Content Include="Content\Styles\images\more.gif" />
     <Content Include="Content\Styles\images\style.css" />
     <Content Include="Content\Styles\images\timeicon.gif" />
@@ -181,11 +185,13 @@
     <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
     <Content Include="README.jQuery.vsdoc.txt" />
+    <Content Include="Scripts\Common.js" />
     <Content Include="Scripts\jquery-1.7.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.16.js" />
     <Content Include="Scripts\jquery-ui-1.8.16.min.js" />
+    <Content Include="Scripts\sliding_effect.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
